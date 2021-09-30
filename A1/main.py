@@ -29,6 +29,8 @@ if __name__ == "__main__":
     question = args.question
 
     if question == "2.1":
+        # Show the results of your boxfilter(n) function for the cases n=3, n=4, and n=5.
+
         filter_class = GaussianFiltering()
         print("n = 3")
         print(filter_class.boxfilter(3))
@@ -38,6 +40,8 @@ if __name__ == "__main__":
         print(filter_class.boxfilter(4))
 
     if question == "2.2":
+        # Show the filter values produced for sigma values of 0.3, 0.5, 1, and 2.
+
         filter_class = GaussianFiltering()
         print("sigma = 0.3")
         print(filter_class.gauss1d(0.3))
@@ -49,6 +53,8 @@ if __name__ == "__main__":
         print(filter_class.gauss1d(2))
 
     if question == "2.3":
+        # Show the 2D Gaussian filter for sigma values of 0.5 and 1.
+
         filter_class = GaussianFiltering()
         print("sigma = 0.5")
         print(filter_class.gauss2d(0.5))
@@ -56,6 +62,8 @@ if __name__ == "__main__":
         print(filter_class.gauss2d(1))
 
     if question == "2.4":
+        # Apply your ‘gaussconvolve2d_manual’ with a sigma of 3 on an image
+
         image = Image.open('./images/dog.jpeg')
 
         # turn the iamge to greyscale image
@@ -80,6 +88,8 @@ if __name__ == "__main__":
         image.show()
 
     if question == "2.5":
+        #  Apply your ‘gaussconvolve2d_scipy’ with a sigma of 3 on an image
+
         image = Image.open('./images/dog.jpeg')
 
         # turn the iamge to greyscale image
@@ -120,6 +130,8 @@ if __name__ == "__main__":
 
 
     if question == "2.6":
+        # Experiment on how much time it takes to convolve the dog image above using your convolution implementation ‘gaussconvolve2d_manual’ and the scipy implementation ‘gaussconvolve2d’
+
         image = Image.open('./images/dog.jpeg')
 
         # turn the iamge to greyscale image
@@ -146,6 +158,9 @@ if __name__ == "__main__":
 
 
     if question == "3":
+        # A hybrid image is the sum of a low-pass filtered version of the one image and a high-pass filtered version of a second image.
+        # Make hybrid images with 3 different sets of each for 3 different sigma value. 
+
         image_sets = [["./images/1b_motorcycle.bmp", "./images/1a_bicycle.bmp"], ["./images/2b_marilyn.bmp", "./images/2a_einstein.bmp"], ["./images/0b_dog.bmp", "./images/0a_cat.bmp"]]
         sigma = [3, 7, 11]
 
@@ -230,6 +245,9 @@ if __name__ == "__main__":
 
 
     if question == "4.1":
+        # Fiven two images affected by Gaussian noise and speckle noise, apply Gaussian filter, bilateral filter, and median filter respectively to denoise the images.
+        # Use the functions ‘cv2.GaussianBlur’, ‘cv2.bilateralFilter’, and ‘cv2.medianBlur’.
+
         # read image
         box_gauss_image = cv2.imread('./images/box_gauss.png', cv2.IMREAD_UNCHANGED)
         box_speckle_image = cv2.imread('./images/box_speckle.png', cv2.IMREAD_UNCHANGED)
@@ -304,6 +322,8 @@ if __name__ == "__main__":
 
 
     if question == "4.2":
+        # Also denosing as 4.1, but use specific parameters that are given. 
+
          # read image
         box_gauss_image = cv2.imread('./images/box_gauss.png', cv2.IMREAD_UNCHANGED)
         box_speckle_image = cv2.imread('./images/box_speckle.png', cv2.IMREAD_UNCHANGED)
