@@ -1,3 +1,3 @@
-# Computer_Vision
+# Computer Vision
 
 These are UBC computer vision course programming assingments.
